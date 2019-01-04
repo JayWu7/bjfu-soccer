@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="st2" extends="struts-default">
+	
+	<action name="login" class="Login.LoginAction">
+		<result name="success">/player.jsp</result> 
+		<result	name="none">/coach.jsp</result> 
+		<result	name="login">/manager.jsp</result>
+		<result name="error">/loginError.jsp</result>
+		<result	name="input">/loginAgain.jsp</result>
+	</action>
+	
+	<action name="register" class="Register.RegisterAction">
+		<result name="success">/registerSuccess.jsp</result>
+		<result name="error">/registerError.jsp</result>
+		<result	name="input">/registerAgain.jsp</result>
+		<result	name="none">/registerFail.jsp</result>
+	</action>
+	
+	<action name="playercer" class="PlayerCer.PlayerCerAction">
+		<result name="success">/certificateSuccess.jsp</result>
+		<result name="error">/playerCertificateError.jsp</result>
+		<result	name="input">/playerCertificateAgain.jsp</result>
+		<result	name="none">/playerCertificateFail.jsp</result> 
+	</action>
+	
+	<action name="coachcer" class="CoachCer.CoachCerAction">
+		<result name="success">/certificateSuccess.jsp</result>
+		<result name="error">/coachCertificateError.jsp</result>
+		<result	name="input">/coachCertificateAgain.jsp</result>
+		<result	name="none">/coachCertificateFail.jsp</result> 
+	</action>
+	
+	<action name="managercer" class="ManagerCer.ManagerCerAction">
+		<result name="success">/certificateSuccess.jsp</result>
+		<result name="error">/managerCertificateError.jsp</result>
+		<result	name="input">/managerCertificateAgain.jsp</result>
+		<result	name="none">/managerCertificateFail.jsp</result> 
+		<result	name="login">/noCertificateRight.jsp</result>
+	</action>
+	
+	<action name="apply" class="Apply.ApplyAction">
+		<result name="success">/applySuccess.jsp</result> 
+		<result name="error">/applyError.jsp</result>
+		<result	name="input">/applyAgain.jsp</result>
+	</action>
+	
+	<action name="over" class="Over.OverAction">
+		<result name="success">/overDone.jsp</result> 
+		<result name="error">/overFail.jsp</result>
+	</action>
+	
+	<action name="tactics" class="CoachSet.SetTacticsAction">
+		<result name="success">/setTacticsSuccess.jsp</result> 
+		<result name="error">/setTacticsError.jsp</result>
+		<result	name="input">/setTacticsAgain.jsp</result>
+	</action>
+	
+	<action name="trainplan" class="CoachSet.SetTrainPlanAction">
+		<result name="success">/setTrainPlanSuccess.jsp</result> 
+		<result name="error">/setTrainPlanError.jsp</result>
+		<result	name="input">/setTrainPlanAgain.jsp</result>
+	</action>
+	
+	<action	name="setStarter" class="CoachSet.SetStarterAction">
+		<result	name="success">/setStarters.jsp</result>
+		<result	name="ERROR">/setStartersError.jsp</result>
+	</action>
+	
+	<action	name="setCoach" class="ManagerSet.SetCoachAction">
+		<result	name="success">/alterCoach.jsp</result>
+		<result	name="error">/alterCoachError.jsp</result>
+	</action>
+	
+	<action	name="deletePlayer" class="ManagerSet.DeletePlayerAction">
+		<result	name="success">/deletePlayer.jsp</result>
+		<result	name="error">/deletePlayerError.jsp</result>
+	</action>
+	
+	<action	name="addPlayer" class="ManagerSet.AddPlayerAction">
+		<result	name="success">/addPlayer.jsp</result>
+		<result	name="error">/addPlayerError.jsp</result>
+	</action>
+	</package>
+</struts>

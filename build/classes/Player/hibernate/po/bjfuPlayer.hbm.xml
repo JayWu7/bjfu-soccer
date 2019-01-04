@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE   hibernate-mapping   
+     PUBLIC   "-//Hibernate/Hibernate   Mapping   DTD//EN"   
+     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+     
+<hibernate-mapping>
+	<class name="Player.hibernate.po.BjfuPlayer" table="bjfuplayer">
+		<id name="stuId" type="int">
+				<column name="stuId" sql-type="int" not-null="true" />
+		</id>
+		<property name="playerName" type="string">
+				<column name="playerName" sql-type="char(20)" not-null="true" />
+		</property>
+		<property name="position" type="string">
+				<column name="position" sql-type="char(20)" not-null="true" />
+		</property>
+		<property name="starter" type="string">
+				<column name="starter" sql-type="char(4)" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

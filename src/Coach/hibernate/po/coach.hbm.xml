@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE   hibernate-mapping   
+     PUBLIC   "-//Hibernate/Hibernate   Mapping   DTD//EN"   
+     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+     
+<hibernate-mapping>
+	<class name="Coach.hibernate.po.Coach" table="coach">
+		<id name="workId" type="int">
+				<column name="workId" sql-type="int" not-null="true" />
+		</id>
+		<property name="name" type="string">
+				<column name="name" sql-type="char(20)" not-null="true" />
+		</property>
+		<property name="introduction" type="string">
+				<column name="introduction" sql-type="char(45)" not-null="false" />
+		</property>
+		<property name="trainPlan" type="string">
+				<column name="trainPlan" sql-type="char(200)" not-null="false" />
+		</property>
+		<property name="tactics" type="string">
+				<column name="tactics" sql-type="char(200)" not-null="false" />
+		</property>
+		<property name="team" type="string">
+				<column name="team" sql-type="char(20)" not-null="false" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<!-- 定义Session工厂 -->
+    <session-factory name="AHibernateTest">
+    <!-- 声明数据库连接属性 -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bjfusoccer</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">jay18210799763</property>       
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- 注册PO映射文件 -->
+        <mapping resource="Player/hibernate/po/bjfuPlayer.hbm.xml"/>
+        <mapping resource="Player/hibernate/po/application.hbm.xml"/>
+        <mapping resource="Coach/hibernate/po/coach.hbm.xml"/>
+         <mapping resource="Player/hibernate/po/player.hbm.xml"/>
+      </session-factory>
+</hibernate-configuration>
